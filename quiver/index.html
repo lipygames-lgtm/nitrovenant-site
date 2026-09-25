@@ -8,7 +8,7 @@
 <style>
  :root{--fundo:#0e1620;--painel:#152b38;--borda:#2f6f86;--texto:#e8eef3;--suave:#a9c7cf;--ouro:#f5c451;--ciano:#43e6ed}
  *{box-sizing:border-box}
- body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.65 -apple-system,Segoe UI,Roboto,"Noto Sans","Noto Sans Devanagari","Noto Sans JP","Hiragino Sans",Arial,sans-serif}
+ body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.65 -apple-system,Segoe UI,Roboto,"Noto Sans","Noto Sans Devanagari","Noto Sans JP","Hiragino Sans","Noto Sans Arabic","Noto Naskh Arabic",Tahoma,Arial,sans-serif}
  .capa{padding:34px 20px 22px;border-bottom:1px solid #22303f;text-align:center}
  .capa h1{margin:0 0 6px;font-size:27px;letter-spacing:-.3px}
  .capa p{margin:0;color:var(--suave);font-size:13px}
@@ -18,7 +18,7 @@
  a{color:var(--ouro)}
  .resumo{background:var(--painel);border:1px solid var(--borda);border-radius:12px;padding:16px 18px;margin:18px 0}
  .resumo p{margin:0 0 8px;font-weight:700;color:#fff}
- .resumo ul{margin:0;padding-left:20px}
+ .resumo ul{margin:0;padding-inline-start:20px}
  .idiomas{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
  .idiomas button{background:#1d3644;color:var(--texto);border:1px solid var(--borda);border-radius:20px;
   padding:6px 15px;font:inherit;font-size:13px;cursor:pointer}
@@ -38,6 +38,7 @@
   <button data-ir="es" aria-pressed="false">Español</button>
   <button data-ir="hi" aria-pressed="false">हिन्दी</button>
   <button data-ir="ja" aria-pressed="false">日本語</button>
+  <button data-ir="ar" aria-pressed="false">العربية</button>
  </div>
 </header>
 <main>
@@ -476,13 +477,77 @@
  <p>プライバシーやゲームについてのご質問：<a href="mailto:bluetubeoficial@gmail.com">bluetubeoficial@gmail.com</a></p>
 </section>
 
+<section data-lang="ar" dir="rtl">
+ <h2 style="margin-top:12px">سياسة الخصوصية</h2>
+ <p><small>آخر تحديث: 25 سبتمبر 2026</small></p>
+ <div class="resumo">
+  <p>الملخص بلا مواربة:</p>
+  <ul>
+   <li>يمكنك لعب اللعبة كلها <b>بلا تسجيل ولا بريد إلكتروني ولا كلمة مرور</b>.</li>
+   <li><b>الترتيب اختياري</b>: إذا أنشأت اسمًا، فسيظهر للاعبين الآخرين مع دولتك وأرقامك القياسية.</li>
+   <li>يمكنك <b>حذف حساب الترتيب متى شئت</b> من داخل اللعبة (القسم 9).</li>
+  </ul>
+ </div>
+
+ <h2>1. ما يبقى على جهازك</h2>
+ <p>يُحفظ تقدمك (المراحل والنجوم والأوقات والعملات والجواهر والمعززات والمظاهر والمهام والإنجازات) وتفضيلاتك (اللغة ومستوى الصوت والاهتزاز والإشعارات) على الجهاز نفسه. للمسح: الإعدادات ← مسح التقدم. كما أن إلغاء تثبيت اللعبة يمسح ما هو موجود على الجهاز.</p>
+
+ <h2>2. الترتيب عبر الإنترنت (اختياري)</h2>
+ <p>إذا انضممت إلى الترتيب، تُنشئ اللعبة حسابًا <b>بلا بريد إلكتروني ولا كلمة مرور</b>: تختار اسم لاعب، ويولّد الهاتف عشوائيًا مفتاحًا سريًا يعرّف الحساب. ولا يحتفظ الخادم إلا بنسخة مموّهة (قيمة تجزئة) من هذا المفتاح.</p>
+ <p><b>ما نحتفظ به:</b> اسم اللاعب؛ ودولة الهاتف (مأخوذة من شريحة الاتصال أو من لغة الجهاز — لا تستخدم اللعبة نظام GPS ولا موقعك)؛ والصورة والوسام اللذين تختارهما من بين ما تقدمه اللعبة؛ والنجوم وأفضل وقت في كل مرحلة؛ وطلبات الصداقة.</p>
+ <p><b>ما يراه اللاعبون الآخرون:</b> الاسم والدولة والصورة والوسام والأرقام القياسية.</p>
+ <p><b>لمنع إساءة الاستخدام:</b> يُحصي الخادم عدد الحسابات التي تُنشأ من كل عنوان إنترنت. ويُحفظ العنوان مموّهًا بمفتاح سري لا يعرفه إلا الخادم، ويُحذف هذا السجل خلال يومين على الأكثر.</p>
+ <p>تُحفظ بيانات الترتيب على Supabase، وهي خدمة قواعد البيانات التي تستخدمها Lipy Games. والحسابات التي ليس فيها أي نجمة، ولم تُستخدم منذ 7 أيام، وليس لها أصدقاء، تُحذف تلقائيًا. أما طلبات الصداقة التي لم يُرَدّ عليها فتختفي بعد 30 يومًا.</p>
+
+ <h2>3. حفظ التقدم (اختياري)</h2>
+ <p>إذا ربطت <b>ألعاب Google Play</b>، تنتقل نسخة من تقدمك إلى <b>حساب Google الخاص بك</b> عبر خدمة الألعاب المحفوظة من Google. وتحمل هذه النسخة أيضًا مفتاح حسابك في الترتيب، ليعود تلقائيًا على الهاتف الجديد. تبقى هذه النسخة في حسابك، <b>ولا يمكننا الوصول إليها</b>.</p>
+
+ <h2>4. الإعلانات</h2>
+ <p>تعرض اللعبة إعلانات من <b>Google AdMob</b>: فيديوهات بمكافأة تختار أنت مشاهدتها، وإعلانات بين المراحل. ولهذا الغرض، قد تعالج Google عنوان IP، ومعرّف الإعلانات الخاص بالجهاز، والتفاعلات مع الإعلان، وبيانات التشخيص. ونحن لا نتلقى هذه البيانات. ويقتصر محتوى الإعلانات على تصنيف «Teen» (للمراهقين).</p>
+ <p>حيث يفرض القانون ذلك (كما في أوروبا والمملكة المتحدة)، يظهر نموذج موافقة عند فتح اللعبة أول مرة، ويمكنك مراجعة اختيارك من الإعدادات ← الخصوصية ← خيارات الإعلانات. ومن يشتري «بدون إعلانات» لا يرى الإعلانات بين المراحل بعد ذلك.</p>
+ <p>تسأل اللعبة خادم Lipy Games عن عدد الإعلانات التي تعرضها، مرة كل 6 ساعات على الأكثر. ولا يحمل هذا الطلب أي بيانات من لعبتك (وكما في أي اتصال، يرى الخادم عنوان الإنترنت).</p>
+ <p>كيف تستخدم Google هذه البيانات: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></p>
+
+ <h2>5. المشتريات داخل اللعبة</h2>
+ <p>تتم المشتريات وتُحصَّل قيمتها عبر <b>Google Play</b>. ونحن لا نرى بيانات الدفع ولا نحتفظ بها أبدًا. وتحتفظ اللعبة برمز كل عملية شراء (على الجهاز، وفي النسخة المحفوظة في Play Games إذا ربطته) فقط لتسليم كل حزمة مرة واحدة لا أكثر.</p>
+
+ <h2>6. الإشعارات</h2>
+ <p>الإشعارات (التحديات والتذكيرات) <b>اختيارية</b>، وتُجدوَل على الجهاز نفسه، ولا يخرج منه أي شيء لأجلها. يمكنك إيقافها متى شئت من الإعدادات ← الإشعارات.</p>
+
+ <h2>7. الأذونات التي تطلبها اللعبة</h2>
+ <ul>
+  <li><b>الإنترنت وحالة الشبكة</b> — الترتيب والإعلانات والمشتريات وحفظ التقدم.</li>
+  <li><b>الفوترة عبر Google Play</b> — المشتريات داخل اللعبة.</li>
+  <li><b>معرّف الإعلانات</b> — إعلانات Google AdMob.</li>
+  <li><b>الاهتزاز</b> — الاستجابة عند اللمس.</li>
+  <li><b>الإشعارات وإعادة التفعيل بعد إعادة تشغيل الجهاز</b> — للإشعارات فقط، إذا فعّلتها.</li>
+ </ul>
+ <p>لا تستخدم اللعبة الموقع ولا الكاميرا ولا الميكروفون ولا جهات الاتصال.</p>
+
+ <h2>8. الأطفال</h2>
+ <p>اللعبة مخصصة <b>لمن هم في سن 13 عامًا فأكثر</b>. وهي غير موجهة للأطفال، ولا نجمع عن علمٍ بيانات من هم دون 13 عامًا.</p>
+
+ <h2>9. كيف تحذف حسابك وبياناتك</h2>
+ <p><b>من داخل اللعبة، فورًا:</b> الترتيب ← الملف الشخصي ← الحساب ← حذف الحساب. ونحذف من الخادم في اللحظة نفسها الاسم والدولة والصورة والوسام والأرقام القياسية والصداقات.</p>
+ <p><b>من دون اللعبة</b> (مثلًا إذا فقدت هاتفك): أرسل رسالة إلى <a href="mailto:bluetubeoficial@gmail.com">bluetubeoficial@gmail.com</a> تذكر فيها اسم اللاعب الخاص بك، ورمز الحساب إن كان لديك (تجده في الملف الشخصي ← الحساب). نحذف البيانات خلال 30 يومًا على الأكثر ونرد عليك للتأكيد.</p>
+ <p><b>التقدم على الجهاز:</b> الإعدادات ← مسح التقدم (إذا كنت مرتبطًا بـ Play Games، فإن النسخة المحفوظة هناك تبدأ من جديد أيضًا). أما إلغاء التثبيت فيمسح ما على الجهاز فقط.</p>
+ <p><b>النسخة في ألعاب Google Play:</b> تبقى في حساب Google الخاص بك، ويمكنك حذفها من إعدادات ألعاب Google Play.</p>
+ <p>صفحة مخصصة للحذف فقط: <a href="excluir-conta.html#ar">حذف الحساب والبيانات</a></p>
+
+ <h2>10. التغييرات على هذه السياسة</h2>
+ <p>إذا تغيّر أي شيء، تُحدَّث هذه الصفحة ويتغيّر التاريخ في أعلاها أيضًا.</p>
+
+ <h2>11. التواصل</h2>
+ <p>للاستفسارات حول الخصوصية أو حول اللعبة: <a href="mailto:bluetubeoficial@gmail.com">bluetubeoficial@gmail.com</a></p>
+</section>
+
 <p class="rodape">Quiver: Arrow Puzzle © Lipy Games · <a href="mailto:bluetubeoficial@gmail.com">bluetubeoficial@gmail.com</a></p>
 </main>
 
 <script>
 // Troca de idioma (os mesmos 5 do jogo). O endereço guarda o idioma: …/#en abre em inglês.
 (function(){
- var L=['pt','en','es','hi','ja'], botoes=document.querySelectorAll('[data-ir]');
+ var L=['pt','en','es','hi','ja','ar'], botoes=document.querySelectorAll('[data-ir]');
  function mostra(lang){
   document.querySelectorAll('[data-lang]').forEach(function(s){s.classList.toggle('on',s.dataset.lang===lang)});
   botoes.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.ir===lang))});

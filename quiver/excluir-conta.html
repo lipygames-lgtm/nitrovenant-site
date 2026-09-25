@@ -8,7 +8,7 @@
 <style>
  :root{--fundo:#0e1620;--painel:#152b38;--borda:#2f6f86;--texto:#e8eef3;--suave:#a9c7cf;--ouro:#f5c451;--ciano:#43e6ed}
  *{box-sizing:border-box}
- body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.65 -apple-system,Segoe UI,Roboto,"Noto Sans","Noto Sans Devanagari","Noto Sans JP","Hiragino Sans",Arial,sans-serif}
+ body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.65 -apple-system,Segoe UI,Roboto,"Noto Sans","Noto Sans Devanagari","Noto Sans JP","Hiragino Sans","Noto Sans Arabic","Noto Naskh Arabic",Tahoma,Arial,sans-serif}
  .capa{padding:34px 20px 22px;border-bottom:1px solid #22303f;text-align:center}
  .capa h1{margin:0 0 6px;font-size:27px;letter-spacing:-.3px}
  .capa p{margin:0;color:var(--suave);font-size:13px}
@@ -18,7 +18,7 @@
  a{color:var(--ouro)}
  .passos{background:var(--painel);border:1px solid var(--borda);border-radius:12px;padding:16px 18px;margin:18px 0}
  .passos p{margin:0 0 8px;font-weight:700;color:#fff}
- .passos ol{margin:0;padding-left:22px}
+ .passos ol{margin:0;padding-inline-start:22px}
  .idiomas{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
  .idiomas button{background:#1d3644;color:var(--texto);border:1px solid var(--borda);border-radius:20px;
   padding:6px 15px;font:inherit;font-size:13px;cursor:pointer}
@@ -38,6 +38,7 @@
   <button data-ir="es" aria-pressed="false">Español</button>
   <button data-ir="hi" aria-pressed="false">हिन्दी</button>
   <button data-ir="ja" aria-pressed="false">日本語</button>
+  <button data-ir="ar" aria-pressed="false">العربية</button>
  </div>
 </header>
 <main>
@@ -183,12 +184,34 @@
  <p>プライバシーポリシー全文：<a href="./#ja">Quiver: Arrow Puzzle · プライバシーポリシー</a></p>
 </section>
 
+<section data-lang="ar" dir="rtl">
+ <h2 style="margin-top:12px">حذف الحساب والبيانات</h2>
+ <p>حساب <b>الترتيب</b> في Quiver: Arrow Puzzle اختياري، ولا يتطلب بريدًا إلكترونيًا ولا كلمة مرور. يمكنك حذفه بطريقتين:</p>
+ <div class="passos">
+  <p>1) من داخل اللعبة، فورًا:</p>
+  <ol><li>افتح اللعبة واضغط على <b>الترتيب</b>.</li><li>اضغط على <b>الملف الشخصي</b> ثم على <b>الحساب</b>.</li><li>اضغط على <b>حذف الحساب</b> وأكّد.</li></ol>
+ </div>
+ <div class="passos">
+  <p>2) من دون اللعبة (مثلًا إذا فقدت هاتفك):</p>
+  <ol><li>أرسل رسالة إلى <a href="mailto:bluetubeoficial@gmail.com">bluetubeoficial@gmail.com</a> واكتب في خانة الموضوع: «حذف حساب Quiver».</li><li>اذكر <b>اسم اللاعب</b> الخاص بك، و<b>رمز الحساب</b> إن كان لديك (تجده في الملف الشخصي ← الحساب).</li><li>نحذف الحساب خلال <b>30 يومًا</b> على الأكثر ونرد عليك للتأكيد.</li></ol>
+ </div>
+ <h2>ما الذي يُحذف</h2>
+ <p>من الخادم: اسم اللاعب، والدولة، والصورة والوسام، والأرقام القياسية (النجوم والأوقات في كل مرحلة)، والصداقات وطلبات الصداقة. وعند الحذف من داخل اللعبة، يتم ذلك في اللحظة نفسها.</p>
+ <h2>ما الذي يبقى، ولأي مدة</h2>
+ <p>لا يبقى أي شيء من الحساب على الخادم بعد الحذف. أما سجلات منع إساءة الاستخدام (عنوان الإنترنت، المحفوظ مموّهًا) فتختفي تلقائيًا خلال يومين على الأكثر. والتقدم على جهازك والنسخة في ألعاب Google Play ملك لك، ولا نحتفظ بهما:</p>
+ <ul>
+  <li><b>على الجهاز:</b> الإعدادات ← مسح التقدم (أو ألغِ تثبيت اللعبة).</li>
+  <li><b>في ألعاب Google Play:</b> من إعدادات ألعاب Google Play، في حساب Google الخاص بك.</li>
+ </ul>
+ <p>سياسة الخصوصية الكاملة: <a href="./#ar">Quiver: Arrow Puzzle · سياسة الخصوصية</a></p>
+</section>
+
 <p class="rodape">Quiver: Arrow Puzzle © Lipy Games · <a href="mailto:bluetubeoficial@gmail.com">bluetubeoficial@gmail.com</a></p>
 </main>
 
 <script>
 (function(){
- var L=['pt','en','es','hi','ja'], botoes=document.querySelectorAll('[data-ir]');
+ var L=['pt','en','es','hi','ja','ar'], botoes=document.querySelectorAll('[data-ir]');
  function mostra(lang){
   document.querySelectorAll('[data-lang]').forEach(function(s){s.classList.toggle('on',s.dataset.lang===lang)});
   botoes.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.ir===lang))});
